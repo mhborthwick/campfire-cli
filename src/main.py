@@ -1,7 +1,10 @@
 import typer
 
+app = typer.Typer()
 
-def main():
+
+@app.command()
+def start_campfire():
     hello = """
 ██╗  ██╗███████╗██╗     ██╗      ██████╗ 
 ██║  ██║██╔════╝██║     ██║     ██╔═══██╗
@@ -14,4 +17,4 @@ def main():
 
 
 if __name__ == "__main__":
-    typer.run(main)
+    app()
