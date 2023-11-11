@@ -13,9 +13,10 @@ def print_campfire(frames: list[list[str]]):
         while True:
             for frame in frames:
                 console.clear()
-                for line in frame:
+                for i, line in enumerate(frame):
+                    sway = " " * (i % 2)
                     colored_line = (
-                        "[bold red]" + line[:5] + "[/bold red]" +
+                        "[bold red]" + sway + line[:5] + "[/bold red]" +
                         "[bold yellow]" + line[5:] + "[/bold yellow]"
                     )
                     print(colored_line)
