@@ -7,6 +7,9 @@ app = typer.Typer()
 
 console = Console()
 
+rocks_lower = "[bold grey50] (( )( )( )( )) [/bold grey50]"
+grass = "[bold medium_spring_green] `````````````` [/bold medium_spring_green]"
+
 
 def print_campfire(frames: list[list[str]]):
     try:
@@ -20,6 +23,8 @@ def print_campfire(frames: list[list[str]]):
                         "[bold yellow]" + line[5:] + "[/bold yellow]"
                     )
                     print(colored_line)
+                print(rocks_lower)
+                print(grass)
                 print()
                 time.sleep(0.2)
     except KeyboardInterrupt:
@@ -30,29 +35,29 @@ def print_campfire(frames: list[list[str]]):
 def start_campfire():
     campfire_frames = [
         [
-            "    , , , ,   ",
-            "     , , ,    ",
+            "    , , , `   ",
+            "     ` , ,    ",
             "      , ,     ",
             "     , , ,    ",
             "    , , , ,   ",
         ],
         [
-            "     , , ,    ",
-            "      , ,     ",
+            "     ` , ,    ",
+            "      , `     ",
             "     , , ,    ",
             "    , , , ,   ",
             "   , , , , ,  ",
         ],
         [
-            "      , ,     ",
-            "     , , ,    ",
+            "      , `     ",
+            "     ` , ,    ",
             "    , , , ,   ",
             "   , , , , ,  ",
             "  , , , , , , ",
         ],
         [
-            "     , , ,    ",
-            "    , , , ,   ",
+            "     ` , ,    ",
+            "    , , , `   ",
             "   , , , , ,  ",
             "  , , , , , , ",
             " , , , , , , ,",
