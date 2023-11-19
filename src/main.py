@@ -34,6 +34,7 @@ class CampfirePrinter:
     def __init__(self, console, audio_player):
         self.console = console
         self.audio_player = audio_player
+        self.keep_running = True
 
     def print_frame(self, frame):
         for i, line in enumerate(frame):
@@ -60,10 +61,15 @@ class CampfirePrinter:
                         self.console.print(f'sound={sound}')
                     self.console.print()
                     time.sleep(0.2)
+                    if self.keep_running != True:
+                        raise KeyboardInterrupt
         except KeyboardInterrupt:
             if sound:
                 self.audio_player.stop()
             self.console.print("[bold]Campfire animation stopped![/bold]")
+
+    def stop_campfire(self):
+        self.keep_running = False
 
 
 @app.command()
