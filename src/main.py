@@ -16,7 +16,7 @@ class AudioPlayer:
     def initialize(self, sound_file):
         pygame.mixer.init()
         pygame.mixer.music.load(sound_file)
-        pygame.mixer.music.set_volume(0.5)
+        pygame.mixer.music.set_volume(0.8)
 
     def play(self):
         pygame.mixer.music.play(loops=-1)
@@ -24,7 +24,7 @@ class AudioPlayer:
     def stop(self):
         pygame.mixer.music.stop()
 
-    def get_audio_path(self):
+    def get_sound_file_path(self):
         script_path = os.path.abspath(__file__)
         script_dir = os.path.dirname(script_path)
         return os.path.join(script_dir, "audio", "campfire_sound.mp3")
@@ -49,7 +49,7 @@ class CampfirePrinter:
     def print_campfire(self, frames, sound, verbose):
         try:
             if sound:
-                audio_path = self.audio_player.get_audio_path()
+                audio_path = self.audio_player.get_sound_file_path()
                 self.audio_player.initialize(audio_path)
                 self.audio_player.play()
             while True:
