@@ -1,3 +1,5 @@
+![Build & Test](https://github.com/mhborthwick/campfire-cli/actions/workflows/build_and_test.yml/badge.svg)
+
 ![demo](./demo.gif)
 
 # campfire-cli
