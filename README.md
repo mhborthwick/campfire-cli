@@ -1,3 +1,5 @@
+![demo](./demo.gif)
+
 # campfire-cli
 
 > Create a campfire in your terminal.
