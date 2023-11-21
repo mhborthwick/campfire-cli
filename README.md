@@ -4,7 +4,7 @@
 
 # campfire-cli
 
-> Create a campfire in your terminal.
+> Create a campfire in your terminal (with optional campfire soundscape).
 
 ## Requirements
 
@@ -42,11 +42,11 @@ $ python src/main.py
 
 #### --sound
 
-Enable campfire sound [default: no-sound].
+Enable campfire soundscape [default: no-sound].
 
 #### --verbose
 
-Display campfire sound on/off message [default: verbose].
+Display campfire soundscape on/off message [default: verbose].
 
 #### --help
 
@@ -60,4 +60,4 @@ $ pytest
 
 ## Credit
 
-Campfire sound from [patches.zone](https://patches.zone/scenes/campfire).
+Campfire soundscape from [patches.zone](https://patches.zone/scenes/campfire).
